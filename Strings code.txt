@@ -1,0 +1,110 @@
+    
+//PALINDROME
+
+
+public static boolean isPalindrome(String input) {
+        int left = 0;
+        int right = input.length() - 1;
+
+        while (left < right) {
+            if (input.charAt(left) != input.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+
+
+
+
+// REVERSE A STRING
+
+void reverseString(string &s){
+    int start=0,end=s.size()-1;
+    while(start<end){
+        swap(s[start],s[end]);
+        start++,end--;
+    }
+}
+
+
+
+
+
+
+//ENCODING
+
+public class encoding {
+    public static String encode(String str, int k) {
+        StringBuilder encodedString = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isLetter(c)) {
+                char encodedChar = (char) ((c + k));
+                encodedString.append(encodedChar);
+            } else {
+                encodedString.append(c);
+            }
+        }
+        return encodedString.toString(); 
+    }
+
+
+
+
+
+
+//REVERSE CASE
+
+	public static String rev(String str) {
+		StringBuilder res=new StringBuilder();
+		for(char c:str.toCharArray()) {
+			if(Character.isLowerCase(c)) {
+				res.append(Character.toUpperCase(c));
+			}
+			else if (Character.isUpperCase(c)) {
+				res.append(Character.toLowerCase(c));
+				
+			}
+			else {
+				res.append(c);
+			}
+		}
+		return res.toString();		
+	}
+
+
+
+
+
+//ONLY CHARS
+
+	static void printchar(String str) {
+		
+		for(int i=0;i<str.length();i++) {
+			if(Character.isLetter(str.charAt(i))) {
+				System.out.print(str.charAt(i)+" ");
+			}
+		}
+		System.out.println();
+	}
+
+
+
+
+
+//ONLY DIGITS
+
+static void printdigi(String str) {
+		for(int i=0;i<str.length();i++) {
+			if(Character.isDigit(str.charAt(i))) {
+				System.out.print(str.charAt(i)+" ");
+			}
+			
+		}
+		System.out.println();
+	}
